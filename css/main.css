@@ -16,6 +16,7 @@ html, body {
     width: 100%;
     color: #F8F8FF;    
     font-family: 'Open Sans', sans-serif;
+    text-align: center;
 }
 
 a {
@@ -23,18 +24,15 @@ a {
     color: #FFAC00;
 }
 
-#header {
-    text-align: center;
-}
-
-#header h1 {
-    font: bold 42px "Open Sans", sans-serif;
-}
-
 #container {
     margin-top: 5em;
     padding: 1em;
     background: rgba(0, 82, 237, 0.6);
+}
+
+#header h1 {
+    font-style: bold;
+    font-size: 42px;
 }
 
 #description {
@@ -49,10 +47,34 @@ a {
 }
 
 #links li {
-    display: inline;  
+    display: inline; 
     padding-left: 2em;
     padding-right: 2em;
     font-size: 2em;
+}
+
+#hacks {
+    padding: 0; 
+    margins: 0;
+}
+
+#hacks h2 {
+    font-size: 32px;
+    margin: 0;
+}
+
+#hacks li {
+    display: inline; 
+    padding: 0;
+    font-size: 2em;
+}
+
+#hacks ul {
+    margin-bottom: 0;
+}
+
+#hacks figcaption {
+    font-size: 21px;
 }
 
 footer {
