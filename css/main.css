@@ -12,7 +12,6 @@ html {
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
     width: 100%;
     color: #F8F8FF;    
     font-family: 'Open Sans', sans-serif;
@@ -25,9 +24,9 @@ a {
 }
 
 #container {
-    margin-top: 5em;
     padding: 1em;
     background: rgba(0, 82, 237, 0.6);
+    margin-top: 5em;
 }
 
 #header h1 {
