@@ -1,12 +1,6 @@
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2rem;margin:.67rem 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1rem}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5rem}sub{bottom:-0.25rem}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35rem .625rem .75rem}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
 
-html, body {
-    text-align: center;
-    height: 100%;
-    width: 100%;
-}
-
 html { 
   background: url(../imgs/bg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -15,3 +9,59 @@ html {
   background-size: cover;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    color: #F8F8FF;    
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #FFAC00;
+}
+
+#header {
+    text-align: center;
+}
+
+#header h1 {
+    font: bold 42px "Open Sans", sans-serif;
+}
+
+#container {
+    margin-top: 5em;
+    padding: 1em;
+    background: rgba(0, 82, 237, 0.6);
+}
+
+#description {
+    text-align: center;
+    font: 21px "Open Sans", sans-serif;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+#links {
+    text-align: center;
+}
+
+#links li {
+    display: inline;  
+    padding-left: 2em;
+    padding-right: 2em;
+    font-size: 2em;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    padding-right: 1em;
+    opacity: 0.9;
+    text-align: right;
+    font-size: 0.8em;
+}
