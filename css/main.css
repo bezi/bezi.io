@@ -76,6 +76,12 @@ a {
     font-size: 21px;
 }
 
+#qr-code {
+    //width: 200px;
+    //height: 200px;
+    //margin: 10px;
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -85,4 +91,8 @@ footer {
     opacity: 0.9;
     text-align: right;
     font-size: 0.8em;
+}
+
+#footer-container {
+    background: rgba(0, 82, 237, 0.6);
 }
