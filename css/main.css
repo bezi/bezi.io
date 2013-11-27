@@ -63,7 +63,9 @@ a {
 }
 
 #hacks li {
-    display: inline; 
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
     padding: 0;
     font-size: 2em;
 }
