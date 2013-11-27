@@ -72,16 +72,11 @@ a {
 
 #hacks ul {
     margin-bottom: 0;
+    padding: 0;
 }
 
 #hacks figcaption {
     font-size: 21px;
-}
-
-#qr-code {
-    //width: 200px;
-    //height: 200px;
-    //margin: 10px;
 }
 
 footer {
