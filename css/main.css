@@ -92,7 +92,7 @@ html {
   font-family: 'Computer Modern Bright', sans; }
 
 #container {
-  background: rgba(25, 25, 25, 0.9);
+  background: rgba(1, 0, 0, 0.7);
   color: ghostwhite;
   width: 980px;
   margin: 20px auto 10px auto; }
@@ -147,7 +147,7 @@ a {
     margin: 10px 0; }
 
 footer {
-  background: rgba(25, 25, 25, 0.9);
+  background: rgba(1, 0, 0, 0.7);
   color: ghostwhite;
   width: 980px;
   margin: 0 auto;
