@@ -1,0 +1,16 @@
+// _nav.scss
+#sidebar {
+    width: $sidebar_width;
+    float: left;
+    text-align: left;
+    ul li {
+        a {
+            color: $section_header_color;
+        }
+
+        ul li a {
+            color: $link_color;
+        }
+    }
+
+}

@@ -1,0 +1,140 @@
+!!! html
+html
+head
+    meta(charset="utf-8")
+    title Oscar Bezi
+    meta(name="description" content="The personal website of Oscar Bezi.")
+    meta(name="author" content="Oscar Bezi, oscar.bezi@gmail.com")
+    link(href="css/normalize.css" rel="stylesheet")
+    link(href="css/main.css" rel="stylesheet")
+    link(href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet")
+
+body
+    #container
+        #header
+            h1 Oscar Bezi
+        #description
+            | Hi! I study Computer Science at Carnegie Mellon University.  I like robots, hackathons, space, and boats.
+        #links
+            ul
+                li
+                    a#email(href="mailto:oscar.bezi@gmail.com") 
+                        i.fa.fa-envelope-o 
+                        |  Email
+                li 
+                    a#github(href="https://github.com/bezi")
+                        i.fa.fa-github-square
+                        |  Github
+                li
+                    a#resume(href="resume.pdf")
+                        i.fa.fa-cloud-download
+                        |  Resume
+                li
+                    a#blog(href="http://forgottensemicolons.com")
+                        i.fa.fa-cogs
+                        |  Blog 
+                .clear
+        
+        #sidebar
+            ul
+                li
+                    a(href="#apps") Web Apps
+                    ul 
+                        li: a(href="angstlist") Angstlist
+                        li: a(href="#cmueats") CMUEats!
+                        li: a(href="#globalizr") Globalizr
+                li
+                    a(href="#robotics") Robotics
+                    ul
+                        li: a(href="#lunarx") CMU Google Lunar X-Prize Team
+                        li: a(href="#modsnake") CMU Biorobotics Lab
+                li 
+                    a(href="#robotics") Hackathons
+                    ul
+                        li 2013
+                        ul 
+                            li: a(href="#hackprinctron_2013") HackPrinceton
+                            li: a(href="#hackcmu_2013") HackCMU
+                li: a(href="#interests") Other Interests
+                li: a(href="#about") About 
+            
+        #content
+            #apps.info_section
+                h2 Web Apps
+                ul
+                    li
+                        h3#angstlist Angstlist
+                        p.info_section_content
+                    li
+                        h3#cmueats CMUEats!
+                        p.info_section_content
+                    li
+                        h3#globalizr Globalizr
+                        p.info_section_content
+
+            
+            #robotics.info_section
+                h2 Robotics
+                ul
+                    li
+                        h3#lunarx CMU Google Lunar X-Prize Team
+                        p.info_section_content
+                    li
+                        h3#modsnake CMU Biorobotics Lab
+                        p.info_section_content
+
+            #hackathons.info_section
+                h2 Hackathons
+                ul
+                    li
+                        h3#hackprinceton_2013 HackPrinceton 2013
+                        p.info_section_content On November 8-10, 2013, I traveled to Princeton.  My teammates, Sinan Cepel, 
+                            a(href="http://jacobzimmerman.me") Jake Zimmerman
+                            |  and Andre Jia, got their first taste of the hackathon experience, while I had never competed in a 48-hour event.
+                            | We were really interested in the data APIs we were shown by the sponsors, including the 
+                            a(href="http://developer.yahoo.com/yql/") Yahoo Query Language
+                            | , or YQL.  We created 
+                            a(href="#globalizr") Globalizr
+                            |  in  
+                            a(href="https://www.djangoproject.com/") Django 
+                            |  to take advantage of this information and display it in an new way using 
+                            a(href="http://www.khronos.org/webgl/") WebGL
+                            | .
+                    li 
+                        h3#hackcmu_2013 HackCMU 2013
+                        p.info_section_content On September 14-15, 2013, I worked with Justin Gallagher and Kirn Hans to make 
+                            a(href="#cmueats") CMUEats
+                            | , a website to help keep track of CMU's eating options.  It was my first hackathon, and I learned
+                            | a lot!  We built CMUEats in 
+                            a(href="https://www.djangoproject.com/") Django 
+                            | and 
+                            a(href="http://getbootstrap.com/") Bootstrap
+                            | , although Justin and I would later port it to 
+                            a(href="http://nodejs.org/") Node.js
+                            | .
+
+            #interests.info_section
+                h2 Other Interests
+                p I am a member of CMU's 
+                    a(href="") rowing crew
+                    | , which has been a wonderful experience.  I also love reading, especially science fiction.
+                    | Recently, I've taken up blogging (my blog, Forgotten Semicolons, is 
+                    a(href="http://forgottensemicolons.com/") here
+                    | ), which I've found to be a relaxing and fulfilling hobby.
+
+            #about.info_section
+                h2 About
+                p This site was built using 
+                    a(href="http://jade-lang.com/") Jade
+                    |  and 
+                    a(href="http://sass-lang.com/") Sass
+                    | .  It's hosted on 
+                    a(href="http://pages.github.com/") Github
+                    | .  The fonts are those used in LaTeX, and are 
+                    a(href="http://checkmyworking.com/cm-web-fonts/") here
+                    | . The uncompiled source for this page is on 
+                    a(href="http://github.com/bezi/bezi.github.io/") Github
+                    |  under the source directory.
+        .clear
+
+    footer &copy; Oscar Bezi 2013-2014.  Photo credit: &copy; James J. Crowley, Jr.

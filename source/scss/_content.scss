@@ -1,0 +1,18 @@
+// _sections.scss
+
+#content {
+    width: 100% - $sidebar_width;
+    float: left;
+}
+
+.info_section {
+    text-align: left;
+    h2 {
+        text-align: center;
+        color: $section_header_color;
+        margin: 10px 0; 
+    }
+    p {
+        margin: 10px 0;
+    }
+}

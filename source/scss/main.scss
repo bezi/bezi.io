@@ -1,0 +1,41 @@
+// main.css
+@import 'colors';
+@import 'sizes';
+@import 'fonts';
+
+html {
+    background: url(../imgs/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+
+    font-family: 'Computer Modern Bright', sans;
+}
+
+#container {
+    background: $bg_color;
+    color: $fg_color;
+    width: $mobile_breakpoint;
+    margin: 20px auto 10px auto;
+}
+
+.clear {
+    clear: both;
+}
+
+@import 'header';
+@import 'nav';
+@import 'content';
+
+footer {
+    background: $bg_color;
+    color: $fg_color;
+    width: $mobile_breakpoint;
+    margin: 0 auto;
+
+    font-size: 0.8em;
+}
+
+@import 'mobile';

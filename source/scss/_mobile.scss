@@ -1,0 +1,20 @@
+// _mobile.scss
+@media (max-width: $mobile_breakpoint) {
+    #container, footer {
+        width: 100%;
+    }
+}
+
+@media (max-width: $mobile_breakpoint_2) {
+    #links li {
+        width: 50%;
+    }
+
+    #content {
+        width: 100%;
+    }
+
+    #sidebar {
+        display: none;
+    }
+}
