@@ -89,10 +89,11 @@ html {
   -o-background-size: cover;
   background-size: cover;
   text-align: center;
+  font-size: 18px;
   font-family: 'Computer Modern Bright', sans; }
 
 #container {
-  background: rgba(1, 0, 0, 0.7);
+  background: rgba(1, 0, 0, 0.8);
   color: ghostwhite;
   width: 980px;
   margin: 120px auto 10px auto; }
@@ -103,7 +104,7 @@ html {
 #header h1 {
   font-style: bold;
   font-size: 42px;
-  color: #8e7cc3;
+  color: #0657c9;
   margin: 0; }
 
 #description {
@@ -115,39 +116,58 @@ a {
   a i {
     color: ghostwhite; }
 
-#links ul {
-  padding: 0;
-  width: 100%; }
-#links li {
-  list-style: none;
-  float: left;
-  width: 25%;
-  font-size: 1.5em; }
+#links {
+  margin-bottom: 50px; }
+  #links ul {
+    padding: 0;
+    width: 100%; }
+  #links li {
+    list-style: none;
+    float: left;
+    width: 25%;
+    font-size: 1.5em; }
 
 #sidebar {
   width: 30%;
   float: left;
   text-align: left; }
-  #sidebar ul li a {
-    color: #8e7cc3; }
-  #sidebar ul li ul li a {
-    color: #ffac00; }
+  #sidebar h2 {
+    margin: 0.5em 0;
+    padding: 0;
+    text-align: center; }
+  #sidebar ul {
+    margin: none; }
+    #sidebar ul li a {
+      color: #0657c9; }
+    #sidebar ul li ul li a {
+      color: ghostwhite; }
 
 #content {
   width: 70%;
-  float: left; }
+  float: left;
+  border-left: 1px solid ghostwhite;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; }
 
 .info_section {
-  text-align: left; }
+  text-align: left;
+  padding: 0 1em; }
+  .info_section ul {
+    margin: 0;
+    padding: 0; }
+    .info_section ul li {
+      list-style: none; }
   .info_section h2 {
     text-align: center;
-    color: #8e7cc3;
-    margin: 10px 0; }
+    color: #0657c9;
+    margin: 0.5em 0; }
+  .info_section h3 {
+    margin: 0.5em 0; }
   .info_section p {
-    margin: 10px 0; }
+    margin: 0.5em 0 1em 0; }
 
 footer {
-  background: rgba(1, 0, 0, 0.7);
+  background: rgba(1, 0, 0, 0.8);
   color: ghostwhite;
   width: 980px;
   margin: 0 auto;
@@ -156,7 +176,7 @@ footer {
 @media (max-width: 980px) {
   #container, footer {
     width: 100%; } }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   #links li {
     width: 50%; }
 

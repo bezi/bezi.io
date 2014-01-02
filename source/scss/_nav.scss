@@ -3,13 +3,24 @@
     width: $sidebar_width;
     float: left;
     text-align: left;
-    ul li {
-        a {
-            color: $section_header_color;
-        }
 
-        ul li a {
-            color: $link_color;
+
+    h2 {
+        margin: 0.5em 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    ul {
+        margin: none;
+        li {
+            a {
+                color: $section_header_color;
+            }
+
+            ul li a {
+                color: $fg_color;
+            }
         }
     }
 
