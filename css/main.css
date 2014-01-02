@@ -181,7 +181,8 @@ footer {
     width: 50%; }
 
   #content {
-    width: 100%; }
+    width: 100%;
+    border: none; }
 
   #sidebar {
     display: none; } }
