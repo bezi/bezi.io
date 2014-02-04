@@ -78,6 +78,10 @@ html, body {
 //===============================
 .info-section {
     text-align: center;
+    ul, p {
+        margin: 0 auto;
+    }
+
     h2 {
         padding: 10px;
         color: $bg;
@@ -88,7 +92,6 @@ html, body {
     }
 
     ul {
-        margin: 0 auto;
         padding: 0;
         list-style: none;
     }
@@ -136,8 +139,6 @@ html, body {
 @media (max-width: $mobile-breakpoint) {
 }
 
-#robotics {
-}
 //===============================
 // Footer
 //===============================

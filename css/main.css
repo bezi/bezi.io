@@ -44,6 +44,8 @@ html, body {
 
 .info-section {
   text-align: center; }
+  .info-section ul, .info-section p {
+    margin: 0 auto; }
   .info-section h2 {
     padding: 10px;
     color: white;
@@ -51,7 +53,6 @@ html, body {
   .info-section h3 {
     color: #af1e2d; }
   .info-section ul {
-    margin: 0 auto;
     padding: 0;
     list-style: none; }
   .info-section li {
