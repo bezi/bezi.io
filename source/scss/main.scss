@@ -1,42 +1,149 @@
-// main.css
-@import 'colors';
-@import 'sizes';
-@import 'fonts';
+// colors
+$blue: rgb(111, 168, 220);
+$green: rgb(147, 195, 125);
+$cmu-red: rgb(175, 30, 45);
+$red: rgb(224, 102, 102); 
+$bg: white;
 
-html {
-    background: url(../imgs/bg.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+// sizes
+$mobile-breakpoint: 980px;
+
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: white;
+}
+
+//===============================
+// HEADER
+//===============================
+
+#header {
+    background: url(../imgs/bg.jpg) fixed no-repeat center center;
     background-size: cover;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    color: $cmu-red;
+    font-size: 1.5em;
+    display: table;
+    .container {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+    
+    .content {
+        background: rgba(0, 0, 0, 0.8);
+        width: 100%;
+    }
+    
+    h1 {
+        font-family: bodoni, serif;
+    }
+}
+
+#links {
+    ul {
+        width: 100%;
+        padding: 0;
+    }
+    li {
+        list-style: none;
+        display: inline;
+        padding: 0 10px;
+        width: 25%;
+    }
+
+    a {
+        text-decoration: none;
+        color: $red;
+    }
+    
+    a:hover {
+        color: white;
+    }
+}
+
+#description {
+    color: white;
+}
+
+//===============================
+// Content
+//===============================
+.info-section {
     text-align: center;
+    h2 {
+        padding: 10px;
+        color: $bg;
+        background: $cmu-red;
+    }
+    h3 {
+        color: $cmu-red;
+    }
 
-    font-size: 18px;
-    font-family: 'Computer Modern Bright', sans;
+    ul {
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+    }
+    li {
+        clear: both;
+    }
+    
+    a {
+        color: $cmu-red;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $cmu-red;
+    }
+
+    img {
+        float: right;
+        width: 300px;
+        margin-left: 1em;
+    }
 }
 
-#container {
-    background: $bg_color;
-    color: $fg_color;
-    width: $mobile_breakpoint;
-    margin: 120px auto 10px auto;
+.info-section-content {
+    width: $mobile-breakpoint;
 }
 
-.clear {
-    clear: both;
+@media (max-width: $mobile-breakpoint) {
+    .info-section-content {
+        text-align: center;
+        width: 100%;
+        p {
+            //text-align: left;
+        }
+    }
+
+    .info-section-content {
+        img {
+            float: none;
+            margin: 0 auto;  
+        }
+    }
 }
 
-@import 'header';
-@import 'nav';
-@import 'content';
+@media (max-width: $mobile-breakpoint) {
+}
 
+#robotics {
+}
+//===============================
+// Footer
+//===============================
 footer {
-    background: $bg_color;
-    color: $fg_color;
-    width: $mobile_breakpoint;
-    margin: 0 auto;
-
+    text-align: center;
     font-size: 0.8em;
+    color: white;
+    background: $cmu-red;
 }
-
-@import 'mobile';
