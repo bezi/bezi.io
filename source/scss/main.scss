@@ -5,10 +5,6 @@ $cmu-red: rgb(175, 30, 45);
 $red: rgb(224, 102, 102); 
 $bg: white;
 
-// sizes
-$mobile-breakpoint: 980px;
-
-
 html, body {
     height: 100%;
     width: 100%;
@@ -23,7 +19,8 @@ html, body {
 //===============================
 
 #header {
-    background: url(../imgs/bg.jpg) fixed no-repeat center center;
+    //background: url(../imgs/bg.jpg) fixed no-repeat center center;
+    background: black;
     background-size: cover;
     margin: 0;
     height: 100%;
@@ -74,77 +71,13 @@ html, body {
 }
 
 //===============================
-// Content
-//===============================
-.info-section {
-    text-align: center;
-    ul, p {
-        margin: 0 auto;
-    }
-
-    h2 {
-        padding: 10px;
-        color: $bg;
-        background: $cmu-red;
-    }
-    h3 {
-        color: $cmu-red;
-    }
-
-    ul {
-        padding: 0;
-        list-style: none;
-    }
-    li {
-        clear: both;
-    }
-    
-    a {
-        color: $cmu-red;
-        text-decoration: none;
-    }
-
-    a:hover {
-        color: $cmu-red;
-    }
-
-    img {
-        float: right;
-        width: 300px;
-        margin-left: 1em;
-    }
-}
-
-.info-section-content {
-    width: $mobile-breakpoint;
-}
-
-@media (max-width: $mobile-breakpoint) {
-    .info-section-content {
-        text-align: center;
-        width: 100%;
-        p {
-            //text-align: left;
-        }
-    }
-
-    .info-section-content {
-        img {
-            float: none;
-            margin: 0 auto;  
-        }
-    }
-}
-
-@media (max-width: $mobile-breakpoint) {
-}
-
-//===============================
 // Footer
 //===============================
 footer {
+    position: absolute;
+    bottom: 0;
     text-align: center;
     font-size: 0.8em;
     color: white;
-    background: $cmu-red;
+    background: rgba(0, 0, 0, 0.8);
 }

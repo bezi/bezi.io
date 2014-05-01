@@ -7,7 +7,7 @@ html, body {
   background: white; }
 
 #header {
-  background: url(../imgs/bg.jpg) fixed no-repeat center center;
+  background: black;
   background-size: cover;
   margin: 0;
   height: 100%;
@@ -42,44 +42,10 @@ html, body {
 #description {
   color: white; }
 
-.info-section {
-  text-align: center; }
-  .info-section ul, .info-section p {
-    margin: 0 auto; }
-  .info-section h2 {
-    padding: 10px;
-    color: white;
-    background: #af1e2d; }
-  .info-section h3 {
-    color: #af1e2d; }
-  .info-section ul {
-    padding: 0;
-    list-style: none; }
-  .info-section li {
-    clear: both; }
-  .info-section a {
-    color: #af1e2d;
-    text-decoration: none; }
-  .info-section a:hover {
-    color: #af1e2d; }
-  .info-section img {
-    float: right;
-    width: 300px;
-    margin-left: 1em; }
-
-.info-section-content {
-  width: 980px; }
-
-@media (max-width: 980px) {
-  .info-section-content {
-    text-align: center;
-    width: 100%; }
-
-  .info-section-content img {
-    float: none;
-    margin: 0 auto; } }
 footer {
+  position: absolute;
+  bottom: 0;
   text-align: center;
   font-size: 0.8em;
   color: white;
-  background: #af1e2d; }
+  background: rgba(0, 0, 0, 0.8); }
