@@ -11,7 +11,7 @@
 echo "Downloading files. . .";
 cd ~/;
 
-URL_ROOT='http://bezi.io/utils';
+URL_ROOT='https://raw.githubusercontent.com/bezi/bezi.github.io/master/utils';
 # .bashrc
 wget -nv -O ~/.bashrc $URL_ROOT/.bashrc;
 # .bash_aliases
