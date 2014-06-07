@@ -33,6 +33,7 @@ gimme git;
 git config --global user.name "Oscar Bezi";
 git config --global user.email "oscar@bezi.io";
 git config --global color.ui true;
+git config --global push.default simple;
 echo "|-- Done!";
 
 # generate SSH keys and propagate them to the various things in ~/.ssh/config
