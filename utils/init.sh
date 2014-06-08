@@ -1,30 +1,3 @@
-#!/bin/bash
-# @file init.sh
-# @brief Initialisation file to be run to set up some preferences for the first 
-#   time on a new Linux PC
-# @author Oscar Bezi (oscar@bezi.io)
-# @since 6 June 2014
-#===============================================================================
-
-# Because the alias file might not have the colours
-BGreen='\[\e[1;92m\]'      # Green
-BYellow='\[\e[1;93m\]'     # Yellow
-BBlue='\[\e[1;94m\]'       # Blue
-
-# download files and stick them in the right places, then source the ~/.bashrc
-# note that I didn't get a .bash_locations: this is a per-computer file
-echo "$BBlueDownloading files. . .";
-
-URL_ROOT='https://raw.githubusercontent.com/bezi/bezi.github.io/master/utils';
-# .bashrc
-wget -nv -O ~/.bashrc $URL_ROOT/.bashrc;
-# .bash_aliases
-wget -nv -O ~/.bash_aliases $URL_ROOT/.bash_aliases;
-# .vimrc
-wget -nv -O ~/.vimrc $URL_ROOT/.vimrc;
-# .ssh/config
-mkdir -p ~/.ssh;
-wget -nv -O ~/.ssh/config $URL_ROOT/.ssh/config;
 
 echo "$BGreen|-- Done!";
 
