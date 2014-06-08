@@ -62,7 +62,7 @@ function bash_prompt {
         REPO_NAME="${REPO_NAME##*/}";
         local REPO_TYPE="git";
         local REPO_BRANCH=`echo $GIT_INFO | grep 'On branch' | awk '{print $3}'`;
-        local STATUS_COLOR=`echo $GIT_INFO | grep 'nothing to commit'`;
+        local STATUS_COLOR=`echo $GIT_INFO | grep 'working directory clean'`;
         local AHEAD=`git status | grep "ahead" | awk '{ print $(NF - 1) }'`;
         
         if [ "$STATUS_COLOR" == "" ]; then
