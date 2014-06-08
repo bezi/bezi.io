@@ -17,13 +17,14 @@ echo "$BBlueDownloading files. . .";
 
 URL_ROOT='https://raw.githubusercontent.com/bezi/bezi.github.io/master/utils';
 # .bashrc
-#wget -nv -O ~/.bashrc $URL_ROOT/.bashrc;
+wget -nv -O ~/.bashrc $URL_ROOT/.bashrc;
 # .bash_aliases
-#wget -nv -O ~/.bash_aliases $URL_ROOT/.bash_aliases;
+wget -nv -O ~/.bash_aliases $URL_ROOT/.bash_aliases;
 # .vimrc
-#wget -nv -O ~/.vimrc $URL_ROOT/.vimrc;
+wget -nv -O ~/.vimrc $URL_ROOT/.vimrc;
 # .ssh/config
-#wget -nv -O ~/.ssh/config $URL_ROOT/.ssh/config;
+mkdir -p ~/.ssh;
+wget -nv -O ~/.ssh/config $URL_ROOT/.ssh/config;
 
 echo "$BGreen|-- Done!";
 
@@ -114,3 +115,12 @@ echo "$BCyan|-- SSH key copied to clipboard.  Opening firefox to add to github. 
 firefox https://github.com/settings/ssh;
 echo "$BGreen|-- Done!";
 echo "$BGreenSetup complete!$No_color";
+
+# wait till they've added the keys before proceeding
+read -p "Press [Enter] key once you've added the github key."
+
+mkdir ~/dev;
+mkdir ~/bin;
+
+wget -nv -O ~/bin/config-merge.sh $URL_ROOT/config-merge.sh;
+chmod +x ~/bin/config-merge.sh
