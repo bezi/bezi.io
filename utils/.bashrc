@@ -63,7 +63,7 @@ function bash_prompt {
         local REPO_TYPE="git";
         local REPO_BRANCH=`echo $GIT_INFO | grep 'On branch' | awk '{print $3}'`;
         local STATUS_COLOR=`echo $GIT_INFO | grep 'nothing to commit'`;
-        local AHEAD=`echo $GIT_INFO | grep "ahead" | awk '{ print $(NF - 1) }'`;
+        local AHEAD=`git status | grep "ahead" | awk '{ print $(NF - 1) }'`;
         
         if [ "$STATUS_COLOR" == "" ]; then
             STATUS_COLOR="$Red";
@@ -81,7 +81,7 @@ function bash_prompt {
         REPO_INFO="$REPO_INFO$STATUS_COLOR$REPO_BRANCH";
 
         if [ "$AHEAD" != "" ]; then
-            LENGTH=$(($LENGTH - ${#Ahead} - 3));
+            LENGTH=$(($LENGTH - ${#AHEAD} - 3));
             REPO_INFO="$REPO_INFO$BCyan(+$AHEAD)";
         fi
         LENGTH=$(($LENGTH - 3));
