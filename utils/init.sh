@@ -14,6 +14,7 @@ BLUE='\e[1;94m'       # Blue
 # download files and stick them in the right places, then source the ~/.bashrc
 # note that I didn't get a .bash_locations: this is a per-computer file
 echo -e "${BLUE}Downloading files. . .";
+cd /tmp/;
 
 URL_ROOT='https://raw.githubusercontent.com/bezi/bezi.github.io/master/utils';
 # .bashrc
@@ -111,6 +112,6 @@ done
 xclip -sel clip < ~/.ssh/id_rsa.pub
 
 echo -e "${YELLOW}|-- SSH key copied to clipboard.  Opening firefox to add to github. . ." ;
-firefox https://github.com/settings/ssh;
+firefox https://github.com/settings/ssh &;
 echo -e "${GREEN}|-- Done!";
 echo -e "${GREEN}Setup complete!$No_color";
