@@ -21,6 +21,8 @@ URL_ROOT='https://raw.githubusercontent.com/bezi/bezi.github.io/master/utils';
 wget -nv -O ~/.bashrc $URL_ROOT/.bashrc;
 # .bash_aliases
 wget -nv -O ~/.bash_aliases $URL_ROOT/.bash_aliases;
+# .bash_prompt
+wget -nv -O ~/.bash_prompt $URL_ROOT/.bash_prompt;
 # .vimrc
 wget -nv -O ~/.vimrc $URL_ROOT/.vimrc;
 # .ssh/config
