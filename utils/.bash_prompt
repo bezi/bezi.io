@@ -1,3 +1,4 @@
+#!/bin/bash
 # @file ~/.bash_prompt
 # @brief sets my custom bash prompt
 # @author Oscar Bezi (oscar@bezi.io)
@@ -12,7 +13,8 @@ function bash_prompt {
     local PROMPT;
     local LENGTH="$COLUMNS"; # number of dashed to fill the line
     local STATUS=$1; # status of last command ran
-    local REPO_INFO=""; # status message from a repo, be it svn or git
+    local GIT_REPO_INFO="";
+    local SVN_REPO_INFO=""; 
     local LINE_COLOR="$Blue";
 
     # make sure to subtract 3 from length every time this is called
@@ -28,7 +30,7 @@ function bash_prompt {
     # Repository information
     local GIT_INFO=`git status 2>&1`;
     
-    if [ "`echo $GIT_INFO | awk '{print $1}'`" != "fatal:" ]; then
+    if [ "`echo $GIT_INFO | grep 'fatal'`" == "" ]; then
         # we're in a git repo
         local REPO_NAME=`git rev-parse --show-toplevel 2>&1 | awk '{print $1}'`;
         REPO_NAME="${REPO_NAME##*/}";
@@ -44,20 +46,54 @@ function bash_prompt {
         fi
 
         LENGTH=$(($LENGTH - ${#REPO_TYPE} - 2));
-        REPO_INFO="$Yellow$REPO_TYPE$White::";
+        GIT_REPO_INFO="$Yellow$REPO_TYPE$White::";
 
         LENGTH=$(($LENGTH - ${#REPO_NAME} - 2));
-        REPO_INFO="$REPO_INFO$STATUS_COLOR$REPO_NAME$White::";
+        GIT_REPO_INFO="$GIT_REPO_INFO$STATUS_COLOR$REPO_NAME$White::";
 
         LENGTH=$(($LENGTH - ${#REPO_BRANCH})); 
-        REPO_INFO="$REPO_INFO$STATUS_COLOR$REPO_BRANCH";
+        GIT_REPO_INFO="$GIT_REPO_INFO$STATUS_COLOR$REPO_BRANCH";
 
         if [ "$AHEAD" != "" ]; then
             LENGTH=$(($LENGTH - ${#AHEAD} - 3));
-            REPO_INFO="$REPO_INFO$BCyan(+$AHEAD)";
+            GIT_REPO_INFO="$GIT_REPO_INFO$BCyan(+$AHEAD)";
         fi
         LENGTH=$(($LENGTH - 3));
-        REPO_INFO=`wrap_things $REPO_INFO`;
+        GIT_REPO_INFO=`wrap_things $GIT_REPO_INFO`;
+    fi
+
+    local SVN_INFO=`svn info 2>&1`;
+    if [ "`echo $SVN_INFO | grep 'not a working copy'`" == "" ]; then
+        # we're in an svn repo!
+        local REPO_NAME=`svn info | grep "^Repository Root" | awk '{ print $NF }'`;
+        REPO_NAME="${REPO_NAME##*/}";
+        local REPO_TYPE="svn";
+        local REPO_BRANCH=`svn info | grep "^Working Copy Root" | awk '{ print $NF }'`;
+        REPO_BRANCH="${REPO_BRANCH##*/}"; 
+        local STATUS_COLOR=`svn status | grep "\(^M\)\|\(^A\)" | wc -l`;
+        local NUM_CHANGED="";
+        if [ "$STATUS_COLOR" == "0" ]; then
+            STATUS_COLOR="$Green";
+        else
+            NUM_CHANGED="$STATUS_COLOR";
+            STATUS_COLOR="$Red";
+        fi
+        LENGTH=$(($LENGTH - ${#REPO_TYPE} - 2));
+        SVN_REPO_INFO="$Yellow$REPO_TYPE$White::";
+
+        LENGTH=$(($LENGTH - ${#REPO_NAME} - 2));
+        SVN_REPO_INFO="$SVN_REPO_INFO$STATUS_COLOR$REPO_NAME$White::";
+
+        LENGTH=$(($LENGTH - ${#REPO_BRANCH})); 
+        SVN_REPO_INFO="$SVN_REPO_INFO$STATUS_COLOR$REPO_BRANCH";
+
+        if [ "$NUM_CHANGED" != "" ]; then
+            LENGTH=$(($LENGTH - ${#NUM_CHANGED} - 3));
+            SVN_REPO_INFO="$SVN_REPO_INFO$BCyan(+$NUM_CHANGED)";
+        fi
+
+        LENGTH=$(($LENGTH - 3));
+        SVN_REPO_INFO=`wrap_things $SVN_REPO_INFO`;
     fi
 
     # Location info
@@ -80,7 +116,7 @@ function bash_prompt {
 
     # combine the first bits
     LENGTH=$(($LENGTH - 2));
-    PROMPT="$LINE_COLOR┌─$INFO$REPO_INFO$LOCATION$LINE_COLOR";
+    PROMPT="$LINE_COLOR┌─$INFO$GIT_REPO_INFO$SVN_REPO_INFO$LOCATION$LINE_COLOR";
 
     # the ─┘ characters at the end
     LENGTH=$(($LENGTH - 2));
