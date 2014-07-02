@@ -1,1 +1,1 @@
-var app={};app.init=function(){skrollr.init({smoothScrolling:!1})},app.init();
+var app={};app.init=function(){skrollr.init({smoothScrolling:!1})};
