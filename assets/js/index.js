@@ -1,1 +1,1 @@
-var app={};app.init=function(){skrollr.init({smoothScrolling:!1})},app.init();
+var app={};app.init=function(){/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent||navigator.vendor||window.opera)||skrollr.init({smoothScrolling:!1,forceHeight:!1})},app.init();
