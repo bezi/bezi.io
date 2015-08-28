@@ -1,1 +1,0 @@
-var app={};app.init=function(){/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent||navigator.vendor||window.opera)||skrollr.init({forceHeight:!1})},app.init();
