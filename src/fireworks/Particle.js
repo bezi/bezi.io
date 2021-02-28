@@ -1,5 +1,5 @@
 // @flow
-import random from "./random";
+import random from './random';
 
 // Minimum particle brightness.
 const PARTICLE_BRIGHTNESS_MIN = 50;
@@ -38,7 +38,7 @@ export default class Particle {
 
   +brightness: number = random(
     PARTICLE_BRIGHTNESS_MIN,
-    PARTICLE_BRIGHTNESS_MAX
+    PARTICLE_BRIGHTNESS_MAX,
   );
   +decay: number = random(PARTICLE_DECAY_MIN, PARTICLE_DECAY_MAX);
   +speed: number = random(PARTICLE_SPEED_MIN, PARTICLE_SPEED_MAX);
@@ -49,7 +49,7 @@ export default class Particle {
     context: CanvasRenderingContext2D,
     x: number,
     y: number,
-    hue: number
+    hue: number,
   ) {
     this.context = context;
     this.x = x;

@@ -1,6 +1,6 @@
 // @flow
-import Firework from "./Firework";
-import Particle from "./Particle";
+import Firework from './Firework';
+import Particle from './Particle';
 
 // Hue change per loop, used to rotate through different firework colors.
 const INITIAL_HUE = Math.floor(Math.random() * 180);
@@ -17,7 +17,7 @@ type QueuedFirework = {
   startY: number,
   endX: number,
   endY: number,
-  activationTime: number
+  activationTime: number,
 };
 
 export default class FireworkEngine {
@@ -35,15 +35,15 @@ export default class FireworkEngine {
 
   render = () => {
     // Clean up the canvas;
-    this.context.globalCompositeOperation = "destination-out";
+    this.context.globalCompositeOperation = 'destination-out';
     this.context.fillStyle = `rgba(0, 0, 0, ${CANVAS_CLEANUP_ALPHA})`;
     this.context.fillRect(
       0,
       0,
       this.context.canvas.width,
-      this.context.canvas.height
+      this.context.canvas.height,
     );
-    this.context.globalCompositeOperation = "lighter";
+    this.context.globalCompositeOperation = 'lighter';
 
     this.hue += HUE_STEP_INCREASE;
 
@@ -71,11 +71,11 @@ export default class FireworkEngine {
     const now = Date.now();
 
     for (let i = this.queue.length - 1; i >= 0; --i) {
-      const { startX, startY, endX, endY, activationTime } = this.queue[i];
+      const {startX, startY, endX, endY, activationTime} = this.queue[i];
 
       if (activationTime < now) {
         this.fireworks.push(
-          new Firework(this.context, startX, startY, endX, endY)
+          new Firework(this.context, startX, startY, endX, endY),
         );
         this.queue.splice(i, 1);
       }
@@ -89,7 +89,7 @@ export default class FireworkEngine {
     startY: number,
     endX: number,
     endY: number,
-    timeout: number = 0
+    timeout: number = 0,
   ) {
     const now = Date.now();
 
@@ -100,7 +100,7 @@ export default class FireworkEngine {
       startY,
       endX,
       endY,
-      activationTime
+      activationTime,
     });
   }
 

@@ -1,5 +1,5 @@
 // @flow
-import random from "./random";
+import random from './random';
 
 const FIREWORK_ACCELERATION = 1.05;
 
@@ -29,7 +29,7 @@ export default class Firework {
   +trail: Array<[number, number]>;
   +brightness: number = random(
     FIREWORK_BRIGHTNESS_MIN,
-    FIREWORK_BRIGHTNESS_MAX
+    FIREWORK_BRIGHTNESS_MAX,
   );
 
   +context: CanvasRenderingContext2D;
@@ -39,7 +39,7 @@ export default class Firework {
     startX: number,
     startY: number,
     endX: number,
-    endY: number
+    endY: number,
   ) {
     this.context = context;
     this.x = startX;
@@ -70,7 +70,7 @@ export default class Firework {
       this.x,
       this.y,
       this.startX,
-      this.startY
+      this.startY,
     );
 
     return traversedDistanceSquared > this.targetDistanceSquared;

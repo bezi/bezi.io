@@ -1,3 +1,1 @@
-import "./fireworks/";
-import "./stars";
-import "./reflection";
+import './fireworks/';

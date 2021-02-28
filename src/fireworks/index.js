@@ -1,7 +1,9 @@
 // @flow
-import FireworkEngine from "./FireworkEngine";
+import './reflection';
+import './stars';
 
-import random from "./random";
+import FireworkEngine from './FireworkEngine';
+import random from './random';
 
 // Minimum number of ticks per manual firework launch.
 const TICKS_PER_FIREWORK_MIN = 5;
@@ -10,9 +12,9 @@ const TICKS_PER_FIREWORK_AUTOMATED_MIN = 10;
 // Maximum number of ticks between each automatic firework launch.
 const TICKS_PER_FIREWORK_AUTOMATED_MAX = 50;
 
-const maybeCanvas = document.getElementById("fireworks");
+const maybeCanvas = document.getElementById('fireworks');
 if (!(maybeCanvas instanceof HTMLCanvasElement)) {
-  throw new Error("No #fireworks canvas.");
+  throw new Error('No #fireworks canvas.');
 }
 
 const canvas: HTMLCanvasElement = maybeCanvas;
@@ -22,7 +24,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 // Set the context, 2d in this case.
-const context = canvas.getContext("2d");
+const context = canvas.getContext('2d');
 const fireworkEngine = new FireworkEngine(context);
 
 let mouseX, mouseY;
@@ -33,19 +35,19 @@ let ticksSinceFireworkAutomated = 0;
 let ticksSinceFirework = 0;
 
 // Track current mouse position within canvas.
-canvas.addEventListener("mousemove", (e: MouseEvent) => {
+canvas.addEventListener('mousemove', (e: MouseEvent) => {
   mouseX = e.pageX - canvas.offsetLeft;
   mouseY = e.pageY - canvas.offsetTop;
 });
 
 // Track when mouse is pressed.
-canvas.addEventListener("mousedown", (e: MouseEvent) => {
+canvas.addEventListener('mousedown', (e: MouseEvent) => {
   e.preventDefault();
   isMouseDown = true;
 });
 
 // Track when mouse is released.
-canvas.addEventListener("mouseup", (e: MouseEvent) => {
+canvas.addEventListener('mouseup', (e: MouseEvent) => {
   e.preventDefault();
   isMouseDown = false;
 });

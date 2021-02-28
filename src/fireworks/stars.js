@@ -1,5 +1,5 @@
-var canvas = document.getElementById("starfield");
-var context = canvas.getContext("2d");
+var canvas = document.getElementById('starfield');
+var context = canvas.getContext('2d');
 
 class Star {
   constructor(x, y, r) {
@@ -11,7 +11,7 @@ class Star {
   }
 
   static randomColor() {
-    const colors = ["#ffffff", "#ffecd3", "#bfcfff"];
+    const colors = ['#ffffff', '#ffecd3', '#bfcfff'];
     return colors[Math.floor(Math.random() * colors.length)];
   }
 
@@ -19,7 +19,7 @@ class Star {
     context.beginPath();
     context.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
     context.shadowBlur = 8;
-    context.shadowColor = "white";
+    context.shadowColor = 'white';
     context.fillStyle = this.color;
     context.fill();
   }
