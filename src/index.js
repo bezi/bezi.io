@@ -1,1 +1,1 @@
-import './fireworks/';
+import './boids/';

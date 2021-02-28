@@ -1,120 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Oscar Bezi</title> <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="My super cool fancy website." />
-  <meta name="theme-color" content="#000000">
-  <style>
-    @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:700|Source+Sans+Pro");
+  <head>
+    <meta charset="utf-8" />
+    <title>Oscar Bezi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="My super cool fancy website." />
+    <meta name="theme-color" content="#000000" />
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700|Source+Sans+Pro');
 
-    :root {
-      --z-index-starfield: 1;
-      --z-index-fireworks: 2;
-      --z-index-reflection: 3;
-      --z-index-content: 4;
-    }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      line-height: 1.75;
-      font-family: "Source Sans Pro", sans-serif;
-      color: white;
-      background: black;
-    }
-
-    a {
-      color: #a0a0a0;
-    }
-
-    h1, h2 {
-      font-family: "Libre Baskerville", serif;
-      font-weight: 700;
-    }
-
-    footer {
-      font-size: 0.7em;
-    }
-
-    canvas, #container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-    }
-
-    #starfield {
-      z-index: var(--z-index-starfield);
-      background: black;
-    }
-
-    #fireworks {
-      z-index: var(--z-index-fireworks);
-    }
-
-    #reflection {
-      z-index: var(--z-index-reflection);
-      pointer-events: none;
-      filter: blur(10px);
-    }
-
-    #container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      pointer-events: none;
-
-      z-index: var(--z-index-content);
-      animation: fadeincontent 3s;
-    }
-
-    @keyframes fadeincontent {
-      0% {
-        opacity: 0;
+      :root {
+        --z-index-boids: 1;
+        --z-index-content: 2;
       }
-      66% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
 
-    #container > * {
-      --background-color: rgba(0, 0, 0, 0.7);
-      max-width: 600px;
-      pointer-events: auto;
-      padding: 50px;
-      background: var(--background-color);
-      box-shadow: 0px 0px 200px 200px var(--background-color);
-      border-radius: 5px;
-    }
-  </style>
-</head>
-<body>
-  <canvas id="starfield"></canvas>
-  <canvas id="fireworks"></canvas>
-  <canvas id="reflection"></canvas>
-  <div id="container">
-    <div>
-      <h1>Hi, I'm Oscar.</h1>
-      <p>
-        I am a software engineer based in Boston. Feel free to drop me a line at my
-        <a href="mailto:oscar@bezi.io" title="I might even reply!">email</a>.
-      </p>
-      <p>
-        Finally, what sort of trendy engineer's homepage would this be without gratuitous links to my
-        <a href="https://github.com/bezi/" title="Open-Source Wizard Land">GitHub</a> and
-        <a href="/docs/resume.pdf" title="Short Job Getter Paper">resume</a>?
-      </p>
-      <footer>
-        &copy; Oscar Bezi, 2021.
-      </footer>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        line-height: 1.75;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: white;
+        background: black;
+      }
+
+      a {
+        color: #a0a0a0;
+      }
+
+      h1,
+      h2 {
+        font-family: 'Libre Baskerville', serif;
+        font-weight: 700;
+      }
+
+      footer {
+        font-size: 0.7em;
+      }
+
+      canvas,
+      #container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+
+      #boids {
+        z-index: var(--z-index-boids);
+        background: black;
+      }
+
+      #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+
+        z-index: var(--z-index-content);
+        animation: fadeincontent 3s;
+      }
+
+      @keyframes fadeincontent {
+        0% {
+          opacity: 0;
+        }
+        66% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      #container > * {
+        --background-color: rgba(0, 0, 0, 0.7);
+        max-width: 600px;
+        pointer-events: auto;
+        padding: 50px;
+        background: var(--background-color);
+        box-shadow: 0px 0px 200px 200px var(--background-color);
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="boids"></canvas>
+    <div id="container">
+      <div>
+        <h1>Hi, I'm Oscar.</h1>
+        <p>
+          I am a software engineer based in Boston. Feel free to drop me a line
+          at my
+          <a href="mailto:oscar@bezi.io" title="I might even reply!">email</a>.
+        </p>
+        <p>
+          Finally, what sort of trendy engineer's homepage would this be without
+          gratuitous links to my
+          <a href="https://github.com/bezi/" title="Open-Source Wizard Land"
+            >GitHub</a
+          >
+          and
+          <a href="/docs/resume.pdf" title="Short Job Getter Paper">resume</a>?
+        </p>
+        <footer>
+          &copy; Oscar Bezi, 2021.
+        </footer>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
