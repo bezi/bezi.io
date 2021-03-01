@@ -4,6 +4,8 @@ const separation = 100;
 const padding = 50;
 
 export default function generateBoids(width, height) {
+  const screen = {width, height};
+
   const xs = centeredPointDistribution({
     min: padding,
     max: width - padding,
@@ -20,7 +22,7 @@ export default function generateBoids(width, height) {
 
   for (const x of xs) {
     for (const y of ys) {
-      boids.push(new Boid(x, y, {width, height}));
+      boids.push(new Boid(x, y, screen));
     }
   }
 

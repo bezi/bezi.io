@@ -12,9 +12,10 @@ function render({width, height, state, alpha}) {
   }
 }
 
-function iterate(state, dt) {
+const PHYSICS_ITERATION_DT = 100;
+function iterate(state) {
   for (const boid of state.boids) {
-    boid.iterate(dt);
+    boid.iterate(PHYSICS_ITERATION_DT, state.boids);
   }
 }
 
@@ -34,9 +35,10 @@ function main() {
   const state = initialState(width, height);
   // Start by running the simulation for a bit, it makes up for the initial
   // positions being exactly on grids.
-  iterate(state, 10 * 1000);
+  for (let i = 0; i < 10; ++i) {
+    iterate(state);
+  }
 
-  const PHYSICS_ITERATION_DT = 100;
   let timeAccumulator = 0;
   let prevTime = Date.now();
 
@@ -46,7 +48,7 @@ function main() {
     prevTime = currTime;
 
     while (timeAccumulator >= PHYSICS_ITERATION_DT) {
-      iterate(state, PHYSICS_ITERATION_DT);
+      iterate(state);
       timeAccumulator -= PHYSICS_ITERATION_DT;
     }
 

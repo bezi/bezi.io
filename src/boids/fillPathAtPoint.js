@@ -1,6 +1,12 @@
-export default function fillPathAtPoint({context, path, color, x, y, theta}) {
+export default function fillPathAtPoint({
+  context,
+  path,
+  color,
+  position,
+  theta,
+}) {
   context.resetTransform();
-  context.translate(x, y);
+  context.translate(position.x, position.y);
   context.rotate(theta);
 
   context.fillStyle = color;
