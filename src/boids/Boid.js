@@ -63,13 +63,32 @@ export default class Boid {
     const visibleBoids = this._visibleBoids(boids);
     const {position, velocity} = this.nextState;
 
+    if (visibleBoids.length === 0) {
+      return new Vector2(0, 0);
+    }
+
     // The three principles of simulated flocking as described by Reynolds are:
     // 1. Collision Avoidance: Avoid collisions with nearby flockmates
     // 2. Velocity Matching: Attempt to match velocity with nearby flockmates
     // 3. Flock centering: Attempt to stay close to nearby flockmates
-    const AVOIDANCE_WEIGHT = 1000;
-    const VELOCITY_MATCHING_WEIGHT = 400;
-    const FLOCK_CENTERING_WEIGHT = 100;
+    const AVOIDANCE_WEIGHT = 10;
+    const VELOCITY_MATCHING_WEIGHT = 1;
+    const FLOCK_CENTERING_WEIGHT = 0.5;
+
+    let averageNeighborVelocity = new Vector2(0, 0);
+    let averageNeighborPosition = new Vector2(0, 0);
+
+    for (const boid of visibleBoids) {
+      averageNeighborVelocity = Vector2.add(
+        averageNeighborVelocity,
+        boid.nextState.velocity,
+      );
+
+      averageNeighborPosition = Vector2.add(
+        averageNeighborPosition,
+        boid.nextState.position,
+      );
+    }
 
     // Collision Avoidance
     let netAvoidanceAcceleration = new Vector2(0, 0);
@@ -86,11 +105,54 @@ export default class Boid {
       );
     }
 
-    const netAcceleration = netAvoidanceAcceleration.multiply(AVOIDANCE_WEIGHT);
+    averageNeighborVelocity.multiply(1 / visibleBoids.length);
+    averageNeighborPosition.multiply(1 / visibleBoids.length);
+
+    // Velocity Matching
+    let netVelocityMatchAcceleration = Vector2.subtract(
+      averageNeighborVelocity,
+      velocity,
+    ).normalize();
+
+    // Flock centering
+    let netFlockCenteringAcceleration = Vector2.subtract(
+      averageNeighborPosition,
+      position,
+    ).normalize();
+
+    // Bring it all together
+    let netAcceleration = Vector2.add(
+      netAvoidanceAcceleration.multiply(AVOIDANCE_WEIGHT),
+      Vector2.add(
+        netVelocityMatchAcceleration.multiply(VELOCITY_MATCHING_WEIGHT),
+        netFlockCenteringAcceleration.multiply(FLOCK_CENTERING_WEIGHT),
+      ),
+    );
+
+    if (Vector2.angleBetween(netAcceleration, velocity) > Math.PI / 2) {
+      const magnitude = netAcceleration.length();
+      const perpendicularAcceleration = Vector2.subtract(
+        netAcceleration,
+        Vector2.projectedOnto(netAcceleration, velocity),
+      );
+      netAcceleration = perpendicularAcceleration
+        .normalize()
+        .multiply(magnitude);
+    }
 
     if (netAcceleration.length() > MAX_ACCELERATION_MAGNITUDE) {
       netAcceleration.normalize().multiply(MAX_ACCELERATION_MAGNITUDE);
     }
+
+    this.velocityMatchAcceleration = averageNeighborVelocity
+      .clone()
+      .normalize()
+      .multiply(30);
+
+    this.acceleration = netAcceleration
+      .clone()
+      .normalize()
+      .multiply(30);
 
     return netAcceleration;
   }
@@ -109,6 +171,7 @@ export default class Boid {
       return angleToBoid < VIEW_ANGLE / 2;
     });
   }
+
   // If we're off the screen, start by teleporting to the other side of the
   // screen.  This isn't smooth, but should happen offscreen. This should only
   // be invoked in a iterate() call, since it breaks the prevState to nextState
