@@ -51,6 +51,17 @@
       #boids {
         z-index: var(--z-index-boids);
         background: black;
+        animation: fadeinboids 1s;
+      }
+
+      @keyframes fadeinboids {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
       }
 
       #container {

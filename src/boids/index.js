@@ -32,10 +32,11 @@ function main() {
   const height = (canvas.height = document.body.offsetHeight);
 
   const state = initialState(width, height);
-  // Start by running the simulation for a bit
-  const PHYSICS_ITERATION_DT = 100;
-  iterate(state, 100);
+  // Start by running the simulation for a bit, it makes up for the initial
+  // positions being exactly on grids.
+  iterate(state, 10 * 1000);
 
+  const PHYSICS_ITERATION_DT = 100;
   let timeAccumulator = 0;
   let prevTime = Date.now();
 
