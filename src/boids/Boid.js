@@ -197,7 +197,3 @@ export default class Boid {
 function clampedRandom(min, max) {
   return min + Math.random() * (max - min);
 }
-
-function clamp(value, min, max) {
-  return value < min ? min : value > max ? max : value;
-}
