@@ -8,4 +8,5 @@ build:
     pnpm run build
 
 on-deploy:
+    @just init
     @just build
