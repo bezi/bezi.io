@@ -1,0 +1,25 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [ trunk ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Install SSH key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        known_hosts: ${{ secrets.KNOWN_HOSTS }}
+
+    - name: SSH and deploy
+      run: |
+        ssh -o StrictHostKeyChecking=yes ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+          "\
+          cd ${{ secrets.DEPLOY_DIR }} && \
+          git pull && \
+          just on-deploy \
+          "
