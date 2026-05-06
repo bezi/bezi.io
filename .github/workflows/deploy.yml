@@ -1,25 +1,33 @@
-name: Deploy to Production
+name: Deploy
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
+
+concurrency:
+  group: deploy-bezi-io
+  cancel-in-progress: true
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-
+    runs-on: [self-hosted, homelab]
+    env:
+      REGISTRY: localhost:30500
     steps:
-    - name: Install SSH key
-      uses: shimataro/ssh-key-action@v2
-      with:
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        known_hosts: ${{ secrets.KNOWN_HOSTS }}
+      - uses: actions/checkout@v6
 
-    - name: SSH and deploy
-      run: |
-        ssh -o StrictHostKeyChecking=yes ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
-          "\
-          cd ${{ secrets.DEPLOY_DIR }} && \
-          git pull && \
-          just on-deploy \
-          "
+      - name: Build and push
+        run: |
+          docker build -t $REGISTRY/bezi-io:${{ github.sha }} -t $REGISTRY/bezi-io:latest .
+          docker push $REGISTRY/bezi-io:${{ github.sha }}
+          docker push $REGISTRY/bezi-io:latest
+
+      - name: Apply manifests
+        run: |
+          git -C /var/lib/github-runner/shared/server-configs pull
+          kubectl apply -f /var/lib/github-runner/shared/server-configs/k8s/homelab/bezi-io/
+
+      - name: Deploy
+        run: |
+          kubectl set image deployment/bezi-io bezi-io=$REGISTRY/bezi-io:${{ github.sha }} -n bezi-io
+          kubectl rollout status deployment/bezi-io -n bezi-io --timeout=120s

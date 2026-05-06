@@ -1,0 +1,11 @@
+**/node_modules
+**/build
+**/dist
+.git
+.github
+.vscode
+.idea
+*.log
+.DS_Store
+README.md
+Justfile
