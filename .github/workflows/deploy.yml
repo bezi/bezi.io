@@ -8,24 +8,37 @@ concurrency:
   group: deploy-bezi-io
   cancel-in-progress: true
 
+env:
+  # Push target: bastion's tailscale endpoint (NUC's buildkit can't
+  # reach localhost:30500 — that would be NUC's own loopback).
+  # Pull target inside the cluster stays localhost:30500; both URLs
+  # hit the same registry backend, which is content-addressed.
+  PUSH_REGISTRY: 100.109.200.120:30500
+  REGISTRY: localhost:30500
+
 jobs:
   deploy:
-    runs-on: [self-hosted, homelab]
-    env:
-      REGISTRY: localhost:30500
+    runs-on: arc-bezi-io
     steps:
       - uses: actions/checkout@v6
 
-      - name: Build and push
-        run: |
-          docker build -t $REGISTRY/bezi-io:${{ github.sha }} -t $REGISTRY/bezi-io:latest .
-          docker push $REGISTRY/bezi-io:${{ github.sha }}
-          docker push $REGISTRY/bezi-io:latest
+      - name: Set up Buildx (remote driver → NUC)
+        uses: docker/setup-buildx-action@v3
+        with:
+          driver: remote
+          endpoint: tcp://100.113.113.115:1234
 
-      - name: Apply manifests
-        run: |
-          git -C /var/lib/github-runner/shared/server-configs pull
-          kubectl apply -f /var/lib/github-runner/shared/server-configs/k8s/homelab/bezi-io/
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: |
+            ${{ env.PUSH_REGISTRY }}/bezi-io:${{ github.sha }}
+            ${{ env.PUSH_REGISTRY }}/bezi-io:latest
+
+      - name: Install kubectl
+        uses: azure/setup-kubectl@v4
 
       - name: Deploy
         run: |
