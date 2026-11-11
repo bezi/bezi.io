@@ -4,9 +4,12 @@ on:
   workflow_dispatch:
   push:
     branches: [master]
+  # Build-only check for PRs (e.g. Renovate): same image build, no push, no deploy.
+  pull_request:
+    branches: [master]
 
 concurrency:
-  group: deploy-bezi-io
+  group: ${{ github.event_name == 'pull_request' && format('pr-{0}', github.ref) || 'deploy-bezi-io' }}
   cancel-in-progress: true
 
 env:
@@ -33,15 +36,17 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          push: true
+          push: ${{ github.event_name != 'pull_request' }}
           tags: |
             ${{ env.PUSH_REGISTRY }}/bezi-io:${{ github.sha }}
             ${{ env.PUSH_REGISTRY }}/bezi-io:latest
 
       - name: Install kubectl
+        if: github.event_name != 'pull_request'
         uses: azure/setup-kubectl@v4
 
       - name: Deploy
+        if: github.event_name != 'pull_request'
         run: |
           kubectl set image deployment/bezi-io bezi-io=$REGISTRY/bezi-io:${{ github.sha }} -n bezi-io
           kubectl rollout status deployment/bezi-io -n bezi-io --timeout=120s
