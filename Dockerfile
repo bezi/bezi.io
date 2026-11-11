@@ -3,7 +3,7 @@
 # 1. Build the static site.
 # react-scripts 1.x predates modern OpenSSL; use legacy provider to avoid
 # `digital envelope routines::unsupported` on node 17+.
-FROM node:20-alpine AS web
+FROM node:22-alpine AS web
 RUN corepack enable
 WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
@@ -13,7 +13,7 @@ ENV NODE_OPTIONS=--openssl-legacy-provider
 RUN pnpm run build
 
 # 2. Static-file server.
-FROM nginx:1.27-alpine
+FROM nginx:1.30-alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=web /app/build /usr/share/nginx/html
 RUN chmod -R a+rX /usr/share/nginx/html
