@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       flow-bin:
-        specifier: ^0.76.0
-        version: 0.76.0
+        specifier: ^0.340.0
+        version: 0.340.0
       prettier:
         specifier: ^1.19.1
         version: 1.19.1
@@ -21,8 +21,8 @@ importers:
         specifier: ^16.14.0
         version: 16.14.0(react@16.14.0)
       react-scripts:
-        specifier: 1.1.4
-        version: 1.1.4(eslint@4.19.1)(react@16.14.0)
+        specifier: 1.1.5
+        version: 1.1.5(eslint@4.19.1)(react@16.14.0)
 
 packages:
 
@@ -742,9 +742,6 @@ packages:
 
   chardet@0.4.2:
     resolution: {integrity: sha512-j/Toj7f1z98Hh2cYo2BVr85EpIRWqUi7rtRSGxh/cqUjqrnJe9l9UE7IUGd2vQ2p+kSHLkSzObQPZPLUC6TQwg==}
-
-  chokidar@1.7.0:
-    resolution: {integrity: sha512-mk8fAWcRUOxY7btlLtitj3A45jOwSAxH4tOFOoEGbVsl6cL6pPMWUy7dwZ/canfj3QEdP6FHSnf/l1c6/WkzVg==}
 
   chokidar@2.1.8:
     resolution: {integrity: sha512-ZmZUazfOzf0Nve7duiCKD23PFSCs4JPoYyccjUFF3aQkQadqBhfzhjkwBH2mNOG9cTBwhamM37EIsIkZw3nRgg==}
@@ -1608,8 +1605,8 @@ packages:
     resolution: {integrity: sha512-dVsPA/UwQ8+2uoFe5GHtiBMu48dWLTdsuEd7CKGlZlD78r1TTWBvDuFaFGKCo/ZfEr95Uk56vZoX86OsHkUeIg==}
     deprecated: flatten is deprecated in favor of utility frameworks such as lodash.
 
-  flow-bin@0.76.0:
-    resolution: {integrity: sha512-ywyEEEDYuItrkpx9HqRhuY78rXYbaWiNZSWgaI0KUGGeOldaTEbCZXosspxTEKqmQTCBW1/02Z2K0kC9C6hqzQ==}
+  flow-bin@0.340.0:
+    resolution: {integrity: sha512-XourZh2487go6B2RTIssruf5iH1rVATg7IdE8CGfMbey/93RJR5HTsqQEgVK33lmGhew8fTRLZmeSEyMVubMpw==}
     engines: {node: '>=0.10.0'}
     hasBin: true
 
@@ -1732,7 +1729,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   global-dirs@0.1.1:
     resolution: {integrity: sha512-NknMLn7F2J7aflwFOlGdNIuCDpN3VGoSoB+aap3KABFWbHVn1TCgFC+np23J8W2BiZbjfEw3BFBycSMv1AFblg==}
@@ -1959,8 +1956,8 @@ packages:
     resolution: {integrity: sha512-m7ZEHgtw69qOGw+jwxXkHlrlIPdTGkyh66zXZ1ajZbxkDBNjSY/LGbmjc7h0s2ELsUDTAhFr55TrPSSqJGPG0A==}
     engines: {node: '>=4'}
 
-  import-local@0.1.1:
-    resolution: {integrity: sha512-SRad1ui9CbQ2qYd4nYb4TfeK4VpvmVpSFEJJBlNM3OCnZ9QWkz5sb/iLXENfueBTCxsCR6xAZzDHPUtTDAi+Dw==}
+  import-local@1.0.0:
+    resolution: {integrity: sha512-vAaZHieK9qjGo58agRBg+bhHX3hoTZU/Oa3GESWLz7t1U62fk63aHuDJJEteXoDeTCcPmUT+z38gkHPZkkmpmQ==}
     engines: {node: '>=4'}
     hasBin: true
 
@@ -2974,6 +2971,7 @@ packages:
 
   path-dirname@1.0.2:
     resolution: {integrity: sha512-ALzNPpyNq9AqXMBjeymIjFDAkAFH06mHJH/cSBHAgU0s4vfpBn6b2nf8tiRLvagKD8RbTpq2FKTBg7cl9l3c7Q==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   path-exists@2.1.0:
     resolution: {integrity: sha512-yTltuKuhtNeFJKa1PiRzfLAU5182q1y4Eb4XCJ3PBqyzEDkAZRzBrKKBct682ls9reBVHf9udYLN5Nd+K1B9BQ==}
@@ -3333,8 +3331,8 @@ packages:
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
-  react-scripts@1.1.4:
-    resolution: {integrity: sha512-UVZIujEIT9BGbx+NGvyfS92eOrNIIpqqFi1FP7a0O9l94A/XV7bhPk70SfDKaXZouCX81tFdXo0948DjhCEgGw==}
+  react-scripts@1.1.5:
+    resolution: {integrity: sha512-ZXqnbg+kLRaacAkjuedMFTgKu9lNltMDDsuwn37CTV7X2tuZQmDKi08eI3LYvtpjqh5vm8/6BhwHRHkRtvMyJg==}
     engines: {node: '>=6'}
     hasBin: true
     peerDependencies:
@@ -3700,14 +3698,11 @@ packages:
     resolution: {integrity: sha512-FtyOnWN/wCHTVXOMwvSv26d+ko5vWlIDD6zoUJ7LW8vh+ZBC8QdljveRP+crNrtBwioEUWy/4dMtbBjA4ioNlg==}
     engines: {node: '>=0.10.0'}
 
-  sockjs-client@1.1.4:
-    resolution: {integrity: sha512-hkDiI0wOmGmoUG3TSIrbDt8AhyzhePuNT3nogc5+c0amyUHu091y+jRK2h/e36olKRG+tSbhlQYHWqdsuW0CtQ==}
-
   sockjs-client@1.1.5:
     resolution: {integrity: sha512-PmPRkAYIeuRgX+ZSieViT4Z3Q23bLS2Itm/ck1tSf5P0/yVuFDiI5q9mcnpXoMdToaPSRS9MEyUx/aaBxrFzyw==}
 
-  sockjs@0.3.18:
-    resolution: {integrity: sha512-TYOxY9QjCiFd+9/Yj0QPMbl2xoO7wSggt0QQDff/5kcXf5ROXZo2tEsjHtRI0biEUJ2viLxI9JjCyTyr8q6h0A==}
+  sockjs@0.3.19:
+    resolution: {integrity: sha512-V48klKZl8T6MzatbLlzzRNhMepEys9Y4oGFpypBFFn1gLI/QQ9HtLLyWJNbPlwGLelOVOEijUbTTJeLLI59jLw==}
 
   sort-keys@1.1.2:
     resolution: {integrity: sha512-vzn8aSqKgytVik0iwdBEi+zevbTYZogewTUM6dtpmGwEcdzbub/TX4bCzRhebDCRC3QzXgJsLRKB2V/Oof7HXg==}
@@ -4143,13 +4138,9 @@ packages:
     resolution: {integrity: sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==}
     engines: {node: '>= 0.4.0'}
 
-  uuid@2.0.3:
-    resolution: {integrity: sha512-FULf7fayPdpASncVy4DLh3xydlXEJJpvIELjYjNeQWYUZ9pclcpvCZSr2gkmN2FrrGcI7G/cJsIEwk5/8vfXpg==}
-    deprecated: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
-
   uuid@3.4.0:
     resolution: {integrity: sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==}
-    deprecated: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   validate-npm-package-license@3.0.4:
@@ -4197,8 +4188,8 @@ packages:
     peerDependencies:
       webpack: ^1.0.0 || ^2.0.0 || ^3.0.0
 
-  webpack-dev-server@2.9.4:
-    resolution: {integrity: sha512-thrqC0EQEoSjXeYgP6pUXcUCZ+LNrKsDPn+mItLnn5VyyNZOJKd06hUP5vqkYwL8nWWXsii0loSF9NHNccT6ow==}
+  webpack-dev-server@2.11.3:
+    resolution: {integrity: sha512-Qz22YEFhWx+M2vvJ+rQppRv39JA0h5NNbOOdODApdX6iZ52Diz7vTPXjF7kJlfn+Uc24Qr48I3SZ9yncQwRycg==}
     engines: {node: '>=4.7'}
     hasBin: true
     peerDependencies:
@@ -4240,6 +4231,7 @@ packages:
 
   whatwg-encoding@1.0.5:
     resolution: {integrity: sha512-b5lim54JOPN9HtzvK9HFXvBma/rnfFeqsic0hSpjtDbVxR3dJKLc+KB4V6GgiGOvl7CY/KNh8rxSo9DKQrnUEw==}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-fetch@2.0.3:
     resolution: {integrity: sha512-SA2KdOXATOroD3EBUYvcdugsusXS5YiQFqwskSbsp5b1gK8HpNi/YP0jcy/BDpdllp305HMnrsVf9K7Be9GiEQ==}
@@ -4451,6 +4443,13 @@ snapshots:
       - supports-color
     optional: true
 
+  anymatch@2.0.0(supports-color@5.5.0):
+    dependencies:
+      micromatch: 3.1.10(supports-color@5.5.0)
+      normalize-path: 2.1.1
+    transitivePeerDependencies:
+      - supports-color
+
   anymatch@3.1.3:
     dependencies:
       normalize-path: 3.0.0
@@ -4616,7 +4615,7 @@ snapshots:
       babel-types: 6.26.0
       babylon: 6.18.0
       convert-source-map: 1.9.0
-      debug: 2.6.9(supports-color@4.5.0)
+      debug: 2.6.9(supports-color@5.5.0)
       json5: 0.5.1
       lodash: 4.17.21
       minimatch: 3.1.2
@@ -5126,7 +5125,7 @@ snapshots:
       babel-runtime: 6.26.0
       babel-types: 6.26.0
       babylon: 6.18.0
-      debug: 2.6.9(supports-color@4.5.0)
+      debug: 2.6.9(supports-color@5.5.0)
       globals: 9.18.0
       invariant: 2.2.4
       lodash: 4.17.21
@@ -5184,11 +5183,11 @@ snapshots:
 
   bn.js@5.2.1: {}
 
-  body-parser@1.20.3(supports-color@4.5.0):
+  body-parser@1.20.3(supports-color@5.5.0):
     dependencies:
       bytes: 3.1.2
       content-type: 1.0.5
-      debug: 2.6.9(supports-color@4.5.0)
+      debug: 2.6.9(supports-color@5.5.0)
       depd: 2.0.0
       destroy: 1.2.0
       http-errors: 2.0.0
@@ -5242,6 +5241,22 @@ snapshots:
       isobject: 3.0.1
       repeat-element: 1.1.4
       snapdragon: 0.8.2(supports-color@4.5.0)
+      snapdragon-node: 2.1.1
+      split-string: 3.1.0
+      to-regex: 3.0.2
+    transitivePeerDependencies:
+      - supports-color
+    optional: true
+
+  braces@2.3.2(supports-color@5.5.0):
+    dependencies:
+      arr-flatten: 1.1.0
+      array-unique: 0.3.2
+      extend-shallow: 2.0.1
+      fill-range: 4.0.0
+      isobject: 3.0.1
+      repeat-element: 1.1.4
+      snapdragon: 0.8.2(supports-color@5.5.0)
       snapdragon-node: 2.1.1
       split-string: 3.1.0
       to-regex: 3.0.2
@@ -5433,21 +5448,6 @@ snapshots:
 
   chardet@0.4.2: {}
 
-  chokidar@1.7.0(supports-color@4.5.0):
-    dependencies:
-      anymatch: 1.3.2
-      async-each: 1.0.6
-      glob-parent: 2.0.0
-      inherits: 2.0.4
-      is-binary-path: 1.0.1
-      is-glob: 2.0.1
-      path-is-absolute: 1.0.1
-      readdirp: 2.2.1(supports-color@4.5.0)
-    optionalDependencies:
-      fsevents: 1.2.13
-    transitivePeerDependencies:
-      - supports-color
-
   chokidar@2.1.8(supports-color@4.5.0):
     dependencies:
       anymatch: 2.0.0(supports-color@4.5.0)
@@ -5466,6 +5466,24 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
     optional: true
+
+  chokidar@2.1.8(supports-color@5.5.0):
+    dependencies:
+      anymatch: 2.0.0(supports-color@5.5.0)
+      async-each: 1.0.6
+      braces: 2.3.2(supports-color@5.5.0)
+      glob-parent: 3.1.0
+      inherits: 2.0.4
+      is-binary-path: 1.0.1
+      is-glob: 4.0.3
+      normalize-path: 3.0.0
+      path-is-absolute: 1.0.1
+      readdirp: 2.2.1(supports-color@5.5.0)
+      upath: 1.2.0
+    optionalDependencies:
+      fsevents: 1.2.13
+    transitivePeerDependencies:
+      - supports-color
 
   chokidar@3.6.0:
     dependencies:
@@ -5583,11 +5601,11 @@ snapshots:
     dependencies:
       mime-db: 1.54.0
 
-  compression@1.8.0(supports-color@4.5.0):
+  compression@1.8.0(supports-color@5.5.0):
     dependencies:
       bytes: 3.1.2
       compressible: 2.0.18
-      debug: 2.6.9(supports-color@4.5.0)
+      debug: 2.6.9(supports-color@5.5.0)
       negotiator: 0.6.4
       on-headers: 1.0.2
       safe-buffer: 5.2.1
@@ -5822,18 +5840,25 @@ snapshots:
       ms: 2.0.0
     optionalDependencies:
       supports-color: 4.5.0
+    optional: true
 
-  debug@3.2.7(supports-color@4.5.0):
+  debug@2.6.9(supports-color@5.5.0):
+    dependencies:
+      ms: 2.0.0
+    optionalDependencies:
+      supports-color: 5.5.0
+
+  debug@3.2.7(supports-color@5.5.0):
     dependencies:
       ms: 2.1.3
     optionalDependencies:
-      supports-color: 4.5.0
+      supports-color: 5.5.0
 
-  debug@4.4.0(supports-color@4.5.0):
+  debug@4.4.0(supports-color@5.5.0):
     dependencies:
       ms: 2.1.3
     optionalDependencies:
-      supports-color: 4.5.0
+      supports-color: 5.5.0
 
   decamelize@1.2.0: {}
 
@@ -5924,7 +5949,7 @@ snapshots:
   detect-port-alt@1.1.6:
     dependencies:
       address: 1.0.3
-      debug: 2.6.9(supports-color@4.5.0)
+      debug: 2.6.9(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -6199,7 +6224,7 @@ snapshots:
 
   eslint-import-resolver-node@0.3.9:
     dependencies:
-      debug: 3.2.7(supports-color@4.5.0)
+      debug: 3.2.7(supports-color@5.5.0)
       is-core-module: 2.16.1
       resolve: 1.22.10
     transitivePeerDependencies:
@@ -6216,7 +6241,7 @@ snapshots:
 
   eslint-module-utils@2.12.0(eslint-import-resolver-node@0.3.9)(eslint@4.19.1):
     dependencies:
-      debug: 3.2.7(supports-color@4.5.0)
+      debug: 3.2.7(supports-color@5.5.0)
     optionalDependencies:
       eslint: 4.19.1
       eslint-import-resolver-node: 0.3.9
@@ -6232,7 +6257,7 @@ snapshots:
     dependencies:
       builtin-modules: 1.1.1
       contains-path: 0.1.0
-      debug: 2.6.9(supports-color@4.5.0)
+      debug: 2.6.9(supports-color@5.5.0)
       doctrine: 1.5.0
       eslint: 4.19.1
       eslint-import-resolver-node: 0.3.9
@@ -6279,7 +6304,7 @@ snapshots:
       chalk: 2.4.2
       concat-stream: 1.6.2
       cross-spawn: 5.1.0
-      debug: 3.2.7(supports-color@4.5.0)
+      debug: 3.2.7(supports-color@5.5.0)
       doctrine: 2.1.0
       eslint-scope: 3.7.3
       eslint-visitor-keys: 1.3.0
@@ -6394,6 +6419,19 @@ snapshots:
       to-regex: 3.0.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
+
+  expand-brackets@2.1.4(supports-color@5.5.0):
+    dependencies:
+      debug: 2.6.9(supports-color@5.5.0)
+      define-property: 0.2.5
+      extend-shallow: 2.0.1
+      posix-character-classes: 0.1.1
+      regex-not: 1.0.2
+      snapdragon: 0.8.2(supports-color@5.5.0)
+      to-regex: 3.0.2
+    transitivePeerDependencies:
+      - supports-color
 
   expand-range@1.8.2:
     dependencies:
@@ -6403,21 +6441,21 @@ snapshots:
     dependencies:
       homedir-polyfill: 1.0.3
 
-  express@4.21.2(supports-color@4.5.0):
+  express@4.21.2(supports-color@5.5.0):
     dependencies:
       accepts: 1.3.8
       array-flatten: 1.1.1
-      body-parser: 1.20.3(supports-color@4.5.0)
+      body-parser: 1.20.3(supports-color@5.5.0)
       content-disposition: 0.5.4
       content-type: 1.0.5
       cookie: 0.7.1
       cookie-signature: 1.0.6
-      debug: 2.6.9(supports-color@4.5.0)
+      debug: 2.6.9(supports-color@5.5.0)
       depd: 2.0.0
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
-      finalhandler: 1.3.1(supports-color@4.5.0)
+      finalhandler: 1.3.1(supports-color@5.5.0)
       fresh: 0.5.2
       http-errors: 2.0.0
       merge-descriptors: 1.0.3
@@ -6429,8 +6467,8 @@ snapshots:
       qs: 6.13.0
       range-parser: 1.2.1
       safe-buffer: 5.2.1
-      send: 0.19.0(supports-color@4.5.0)
-      serve-static: 1.16.2(supports-color@4.5.0)
+      send: 0.19.0(supports-color@5.5.0)
+      serve-static: 1.16.2(supports-color@5.5.0)
       setprototypeof: 1.2.0
       statuses: 2.0.1
       type-is: 1.6.18
@@ -6473,6 +6511,20 @@ snapshots:
       fragment-cache: 0.2.1
       regex-not: 1.0.2
       snapdragon: 0.8.2(supports-color@4.5.0)
+      to-regex: 3.0.2
+    transitivePeerDependencies:
+      - supports-color
+    optional: true
+
+  extglob@2.0.4(supports-color@5.5.0):
+    dependencies:
+      array-unique: 0.3.2
+      define-property: 1.0.0
+      expand-brackets: 2.1.4(supports-color@5.5.0)
+      extend-shallow: 2.0.1
+      fragment-cache: 0.2.1
+      regex-not: 1.0.2
+      snapdragon: 0.8.2(supports-color@5.5.0)
       to-regex: 3.0.2
     transitivePeerDependencies:
       - supports-color
@@ -6560,9 +6612,9 @@ snapshots:
       to-regex-range: 5.0.1
     optional: true
 
-  finalhandler@1.3.1(supports-color@4.5.0):
+  finalhandler@1.3.1(supports-color@5.5.0):
     dependencies:
-      debug: 2.6.9(supports-color@4.5.0)
+      debug: 2.6.9(supports-color@5.5.0)
       encodeurl: 2.0.0
       escape-html: 1.0.3
       on-finished: 2.4.1
@@ -6602,11 +6654,11 @@ snapshots:
 
   flatten@1.0.3: {}
 
-  flow-bin@0.76.0: {}
+  flow-bin@0.340.0: {}
 
-  follow-redirects@1.15.9(debug@3.2.7(supports-color@4.5.0)):
+  follow-redirects@1.15.9(debug@3.2.7(supports-color@5.5.0)):
     optionalDependencies:
-      debug: 3.2.7(supports-color@4.5.0)
+      debug: 3.2.7(supports-color@5.5.0)
 
   for-each@0.3.5:
     dependencies:
@@ -6723,7 +6775,6 @@ snapshots:
     dependencies:
       is-glob: 3.1.0
       path-dirname: 1.0.2
-    optional: true
 
   glob-parent@5.1.2:
     dependencies:
@@ -6968,19 +7019,19 @@ snapshots:
 
   http-parser-js@0.5.9: {}
 
-  http-proxy-middleware@0.17.4(debug@3.2.7(supports-color@4.5.0)):
+  http-proxy-middleware@0.17.4(debug@3.2.7(supports-color@5.5.0)):
     dependencies:
-      http-proxy: 1.18.1(debug@3.2.7(supports-color@4.5.0))
+      http-proxy: 1.18.1(debug@3.2.7(supports-color@5.5.0))
       is-glob: 3.1.0
       lodash: 4.17.21
       micromatch: 2.3.11
     transitivePeerDependencies:
       - debug
 
-  http-proxy@1.18.1(debug@3.2.7(supports-color@4.5.0)):
+  http-proxy@1.18.1(debug@3.2.7(supports-color@5.5.0)):
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.15.9(debug@3.2.7(supports-color@4.5.0))
+      follow-redirects: 1.15.9(debug@3.2.7(supports-color@5.5.0))
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
@@ -7009,7 +7060,7 @@ snapshots:
 
   import-lazy@2.1.0: {}
 
-  import-local@0.1.1:
+  import-local@1.0.0:
     dependencies:
       pkg-dir: 2.0.0
       resolve-cwd: 2.0.0
@@ -7206,7 +7257,6 @@ snapshots:
   is-glob@4.0.3:
     dependencies:
       is-extglob: 2.1.1
-    optional: true
 
   is-installed-globally@0.1.0:
     dependencies:
@@ -7377,7 +7427,7 @@ snapshots:
 
   istanbul-lib-source-maps@1.2.6:
     dependencies:
-      debug: 3.2.7(supports-color@4.5.0)
+      debug: 3.2.7(supports-color@5.5.0)
       istanbul-lib-coverage: 1.2.1
       mkdirp: 0.5.6
       rimraf: 2.7.1
@@ -7510,7 +7560,7 @@ snapshots:
     dependencies:
       browser-resolve: 1.11.3
       is-builtin-module: 1.0.0
-      resolve: 1.6.0
+      resolve: 1.22.10
 
   jest-runtime@20.0.4:
     dependencies:
@@ -7869,6 +7919,25 @@ snapshots:
       to-regex: 3.0.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
+
+  micromatch@3.1.10(supports-color@5.5.0):
+    dependencies:
+      arr-diff: 4.0.0
+      array-unique: 0.3.2
+      braces: 2.3.2(supports-color@5.5.0)
+      define-property: 2.0.2
+      extend-shallow: 3.0.2
+      extglob: 2.0.4(supports-color@5.5.0)
+      fragment-cache: 0.2.1
+      kind-of: 6.0.3
+      nanomatch: 1.2.13(supports-color@5.5.0)
+      object.pick: 1.3.0
+      regex-not: 1.0.2
+      snapdragon: 0.8.2(supports-color@5.5.0)
+      to-regex: 3.0.2
+    transitivePeerDependencies:
+      - supports-color
 
   miller-rabin@4.0.1:
     dependencies:
@@ -7941,6 +8010,23 @@ snapshots:
       to-regex: 3.0.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
+
+  nanomatch@1.2.13(supports-color@5.5.0):
+    dependencies:
+      arr-diff: 4.0.0
+      array-unique: 0.3.2
+      define-property: 2.0.2
+      extend-shallow: 3.0.2
+      fragment-cache: 0.2.1
+      is-windows: 1.0.2
+      kind-of: 6.0.3
+      object.pick: 1.3.0
+      regex-not: 1.0.2
+      snapdragon: 0.8.2(supports-color@5.5.0)
+      to-regex: 3.0.2
+    transitivePeerDependencies:
+      - supports-color
 
   natural-compare@1.4.0: {}
 
@@ -8005,8 +8091,7 @@ snapshots:
     dependencies:
       remove-trailing-separator: 1.1.0
 
-  normalize-path@3.0.0:
-    optional: true
+  normalize-path@3.0.0: {}
 
   normalize-range@0.1.2: {}
 
@@ -8190,8 +8275,7 @@ snapshots:
 
   path-browserify@0.0.1: {}
 
-  path-dirname@1.0.2:
-    optional: true
+  path-dirname@1.0.2: {}
 
   path-exists@2.1.0:
     dependencies:
@@ -8256,10 +8340,10 @@ snapshots:
 
   pluralize@7.0.0: {}
 
-  portfinder@1.0.35(supports-color@4.5.0):
+  portfinder@1.0.35(supports-color@5.5.0):
     dependencies:
       async: 3.2.6
-      debug: 4.4.0(supports-color@4.5.0)
+      debug: 4.4.0(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -8609,7 +8693,7 @@ snapshots:
       react-error-overlay: 4.0.1
       recursive-readdir: 2.2.1
       shell-quote: 1.6.1
-      sockjs-client: 1.1.5
+      sockjs-client: 1.1.5(supports-color@5.5.0)
       strip-ansi: 3.0.1
       text-table: 0.2.0
       webpack: 3.8.1
@@ -8628,7 +8712,7 @@ snapshots:
 
   react-is@16.13.1: {}
 
-  react-scripts@1.1.4(eslint@4.19.1)(react@16.14.0):
+  react-scripts@1.1.5(eslint@4.19.1)(react@16.14.0):
     dependencies:
       autoprefixer: 7.1.6
       babel-core: 6.26.0
@@ -8666,7 +8750,7 @@ snapshots:
       sw-precache-webpack-plugin: 0.11.4(webpack@3.8.1)
       url-loader: 0.6.2(file-loader@1.1.5(webpack@3.8.1))
       webpack: 3.8.1
-      webpack-dev-server: 2.9.4(webpack@3.8.1)
+      webpack-dev-server: 2.11.3(webpack@3.8.1)
       webpack-manifest-plugin: 1.3.2(webpack@3.8.1)
       whatwg-fetch: 2.0.3
     optionalDependencies:
@@ -8722,6 +8806,15 @@ snapshots:
     dependencies:
       graceful-fs: 4.2.11
       micromatch: 3.1.10(supports-color@4.5.0)
+      readable-stream: 2.3.8
+    transitivePeerDependencies:
+      - supports-color
+    optional: true
+
+  readdirp@2.2.1(supports-color@5.5.0):
+    dependencies:
+      graceful-fs: 4.2.11
+      micromatch: 3.1.10(supports-color@5.5.0)
       readable-stream: 2.3.8
     transitivePeerDependencies:
       - supports-color
@@ -8991,9 +9084,9 @@ snapshots:
 
   semver@5.7.2: {}
 
-  send@0.19.0(supports-color@4.5.0):
+  send@0.19.0(supports-color@5.5.0):
     dependencies:
-      debug: 2.6.9(supports-color@4.5.0)
+      debug: 2.6.9(supports-color@5.5.0)
       depd: 2.0.0
       destroy: 1.2.0
       encodeurl: 1.0.2
@@ -9009,11 +9102,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  serve-index@1.9.1(supports-color@4.5.0):
+  serve-index@1.9.1(supports-color@5.5.0):
     dependencies:
       accepts: 1.3.8
       batch: 0.6.1
-      debug: 2.6.9(supports-color@4.5.0)
+      debug: 2.6.9(supports-color@5.5.0)
       escape-html: 1.0.3
       http-errors: 1.6.3
       mime-types: 2.1.35
@@ -9021,12 +9114,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  serve-static@1.16.2(supports-color@4.5.0):
+  serve-static@1.16.2(supports-color@5.5.0):
     dependencies:
       encodeurl: 2.0.0
       escape-html: 1.0.3
       parseurl: 1.3.3
-      send: 0.19.0(supports-color@4.5.0)
+      send: 0.19.0(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -9147,10 +9240,24 @@ snapshots:
       use: 3.1.1
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
-  sockjs-client@1.1.4(supports-color@4.5.0):
+  snapdragon@0.8.2(supports-color@5.5.0):
     dependencies:
-      debug: 2.6.9(supports-color@4.5.0)
+      base: 0.11.2
+      debug: 2.6.9(supports-color@5.5.0)
+      define-property: 0.2.5
+      extend-shallow: 2.0.1
+      map-cache: 0.2.2
+      source-map: 0.5.7
+      source-map-resolve: 0.5.3
+      use: 3.1.1
+    transitivePeerDependencies:
+      - supports-color
+
+  sockjs-client@1.1.5(supports-color@5.5.0):
+    dependencies:
+      debug: 2.6.9(supports-color@5.5.0)
       eventsource: 0.1.6
       faye-websocket: 0.11.4
       inherits: 2.0.4
@@ -9159,21 +9266,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  sockjs-client@1.1.5:
-    dependencies:
-      debug: 2.6.9(supports-color@4.5.0)
-      eventsource: 0.1.6
-      faye-websocket: 0.11.4
-      inherits: 2.0.4
-      json3: 3.3.3
-      url-parse: 1.5.10
-    transitivePeerDependencies:
-      - supports-color
-
-  sockjs@0.3.18:
+  sockjs@0.3.19:
     dependencies:
       faye-websocket: 0.10.0
-      uuid: 2.0.3
+      uuid: 3.4.0
 
   sort-keys@1.1.2:
     dependencies:
@@ -9213,9 +9309,9 @@ snapshots:
 
   spdx-license-ids@3.0.21: {}
 
-  spdy-transport@2.1.1(supports-color@4.5.0):
+  spdy-transport@2.1.1(supports-color@5.5.0):
     dependencies:
-      debug: 2.6.9(supports-color@4.5.0)
+      debug: 2.6.9(supports-color@5.5.0)
       detect-node: 2.1.0
       hpack.js: 2.1.6
       obuf: 1.1.2
@@ -9225,14 +9321,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  spdy@3.4.7(supports-color@4.5.0):
+  spdy@3.4.7(supports-color@5.5.0):
     dependencies:
-      debug: 2.6.9(supports-color@4.5.0)
+      debug: 2.6.9(supports-color@5.5.0)
       handle-thing: 1.2.5
       http-deceiver: 1.2.7
       safe-buffer: 5.2.1
       select-hose: 2.0.0
-      spdy-transport: 2.1.1(supports-color@4.5.0)
+      spdy-transport: 2.1.1(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -9602,8 +9698,7 @@ snapshots:
 
   unzip-response@2.0.1: {}
 
-  upath@1.2.0:
-    optional: true
+  upath@1.2.0: {}
 
   update-notifier@2.5.0:
     dependencies:
@@ -9665,8 +9760,6 @@ snapshots:
 
   utils-merge@1.0.1: {}
 
-  uuid@2.0.3: {}
-
   uuid@3.4.0: {}
 
   validate-npm-package-license@3.0.4:
@@ -9726,33 +9819,33 @@ snapshots:
       time-stamp: 2.2.0
       webpack: 3.8.1
 
-  webpack-dev-server@2.9.4(webpack@3.8.1):
+  webpack-dev-server@2.11.3(webpack@3.8.1):
     dependencies:
       ansi-html: 0.0.7
       array-includes: 3.1.8
       bonjour: 3.5.0
-      chokidar: 1.7.0(supports-color@4.5.0)
-      compression: 1.8.0(supports-color@4.5.0)
+      chokidar: 2.1.8(supports-color@5.5.0)
+      compression: 1.8.0(supports-color@5.5.0)
       connect-history-api-fallback: 1.6.0
-      debug: 3.2.7(supports-color@4.5.0)
+      debug: 3.2.7(supports-color@5.5.0)
       del: 3.0.0
-      express: 4.21.2(supports-color@4.5.0)
+      express: 4.21.2(supports-color@5.5.0)
       html-entities: 1.4.0
-      http-proxy-middleware: 0.17.4(debug@3.2.7(supports-color@4.5.0))
-      import-local: 0.1.1
+      http-proxy-middleware: 0.17.4(debug@3.2.7(supports-color@5.5.0))
+      import-local: 1.0.0
       internal-ip: 1.2.0
       ip: 1.1.9
       killable: 1.0.1
       loglevel: 1.9.2
       opn: 5.5.0
-      portfinder: 1.0.35(supports-color@4.5.0)
+      portfinder: 1.0.35(supports-color@5.5.0)
       selfsigned: 1.10.14
-      serve-index: 1.9.1(supports-color@4.5.0)
-      sockjs: 0.3.18
-      sockjs-client: 1.1.4(supports-color@4.5.0)
-      spdy: 3.4.7(supports-color@4.5.0)
+      serve-index: 1.9.1(supports-color@5.5.0)
+      sockjs: 0.3.19
+      sockjs-client: 1.1.5(supports-color@5.5.0)
+      spdy: 3.4.7(supports-color@5.5.0)
       strip-ansi: 3.0.1
-      supports-color: 4.5.0
+      supports-color: 5.5.0
       webpack: 3.8.1
       webpack-dev-middleware: 1.12.2(webpack@3.8.1)
       yargs: 6.6.0
