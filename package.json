@@ -5,8 +5,8 @@
   "dependencies": {
     "flow-bin": "^0.340.0",
     "prettier": "^1.19.1",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-scripts": "1.1.5"
   },
   "prettier": {
