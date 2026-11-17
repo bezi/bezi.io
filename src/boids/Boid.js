@@ -149,10 +149,7 @@ export default class Boid {
       .normalize()
       .multiply(30);
 
-    this.acceleration = netAcceleration
-      .clone()
-      .normalize()
-      .multiply(30);
+    this.acceleration = netAcceleration.clone().normalize().multiply(30);
 
     return netAcceleration;
   }
@@ -160,7 +157,7 @@ export default class Boid {
   _visibleBoids(boids) {
     const {position, velocity} = this.nextState;
 
-    return boids.filter(boid => {
+    return boids.filter((boid) => {
       const offset = Vector2.subtract(position, boid.nextState.position);
 
       if (offset.length() > VISION_RADIUS) {
