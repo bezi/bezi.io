@@ -176,8 +176,8 @@ importers:
   .:
     devDependencies:
       flow-bin:
-        specifier: ^0.340.0
-        version: 0.340.0
+        specifier: ^0.341.0
+        version: 0.341.0
       prettier:
         specifier: ^3.10.1
         version: 3.10.1
@@ -326,8 +326,8 @@ packages:
       picomatch:
         optional: true
 
-  flow-bin@0.340.0:
-    resolution: {integrity: sha512-XourZh2487go6B2RTIssruf5iH1rVATg7IdE8CGfMbey/93RJR5HTsqQEgVK33lmGhew8fTRLZmeSEyMVubMpw==}
+  flow-bin@0.341.0:
+    resolution: {integrity: sha512-NgsIhAk4TNRXRHro00uu+dI0fUsrL8w1jcdQOIXLVxU9YS6YyrwbvxGJr5RQXtRqeu2ScN+oXfJG7ooMH7HlXw==}
     engines: {node: '>=0.10.0'}
     hasBin: true
 
@@ -582,7 +582,7 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.7
 
-  flow-bin@0.340.0: {}
+  flow-bin@0.341.0: {}
 
   fsevents@2.3.3:
     optional: true
