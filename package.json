@@ -11,7 +11,7 @@
     "format:check": "prettier --check index.html src"
   },
   "devDependencies": {
-    "flow-bin": "^0.340.0",
+    "flow-bin": "^0.341.0",
     "prettier": "^3.10.1",
     "vite": "^8.3.8"
   },
